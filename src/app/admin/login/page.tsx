@@ -8,7 +8,7 @@ const page = () => {
             <Image src={logo} alt="logo" width={350} height={130} priority/>
             <div className='w-[500px] bg-white h-[250px] rounded-[20px] shadow-xl p-5'>
             <form className='mx-10'>
-                <div className="text-lg font-bold text-center mb-5">
+                <div className="text- font-bold text-center mb-5">
                     Admin Panel Login
                 </div>
                 <div className="mb-4 flex flex-row items-center justify-between" >
@@ -40,9 +40,9 @@ const page = () => {
                 <div className="flex float-right">
                     <button
                         type="submit"
-                        className="bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] hover:from-[var(--primay)] hover:to-[var(--darkPurple)] text-white font-medium py-1 px-8 rounded-full focus:outline-none focus:shadow-outline"
+                        className="bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] text-white text-sm font-medium py-1 px-6 rounded-full focus:outline-none focus:shadow-outline"
                     >
-                        Login
+                        LOGIN
                     </button>
                 </div>
             </form>

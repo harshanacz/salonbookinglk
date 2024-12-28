@@ -9,6 +9,7 @@
   --primary: #6A0DAD;
   --secondary: #8E44AD;
   --accent: #BA68C8;
+  --superAccent: #f5f1f7;
 
   --pageBackground: #FFF5FF;
   --backgroundWhite: #FFFFFF;
@@ -20,6 +21,11 @@
   --success: #4CAF50;
   --errorOrRedNotifications: #FF9800;
   --warning: #F44336;
+
+  --blackColor : #000000;
+  --whiteColor : #FFFFFF;
+  --greyColor : #808080;
+  --lightGreyColor : #D3D3D3;
 }
 
 @media (prefers-color-scheme: dark) {

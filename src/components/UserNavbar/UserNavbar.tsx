@@ -14,13 +14,16 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold text-[var(--blackColor)]">
+            <Link href="/" className="text-2xl font-bold text-[var(--blackColor)]">
               SalonBooking.lk
             </Link>
           </div>
 
           {/* Desktop Links */}
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
+          <a href="#" className={styles["link-btn"]}>
+          Categories
+            </a>
             <a href="#" className={styles["link-btn"]}>
               For Business
             </a>
@@ -53,6 +56,9 @@ export default function Navbar() {
   className={`${mobileMenuOpen ? "block" : "hidden"} sm:hidden absolute top-16 left-0 w-full shadow-sm z-50 `}
 >
   <div className={styles["mobile-menu-container"]}>
+  <a href="#" className={styles["mobile-menu-link"]}>
+  Categories
+    </a>
     <a href="#" className={styles["mobile-menu-link"]}>
       For Business
     </a>

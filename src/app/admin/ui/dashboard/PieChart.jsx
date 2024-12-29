@@ -1,58 +1,50 @@
-"use client";
-
 import { Doughnut } from "react-chartjs-2";
 import {
-    Chart as ChartJS,
-    ArcElement,
-    Tooltip,
-    Legend,
-    Title,
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
 } from "chart.js";
 
-// Register required components
-ChartJS.register(ArcElement, Tooltip, Legend, Title);
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChart = () => {
-    const data = {
-        labels: ["Hair Cut", "Eye brow", "Nail art"],
-        datasets: [
-            {
-                label: "Segmentation",
-                data: [40, 30, 30], // Sample values for segments
-                backgroundColor: ["#f44336", "#4caf50", "#03a9f4"], // Colors for segments
-                hoverOffset: 4, // Effect when hovering
-            },
-        ],
-    };
+  const data = {
+    labels: ["Hair Cut", "Eye Brow", "Nail Art"],
+    datasets: [
+      {
+        data: [40, 30, 30], // Replace with your percentages or values
+        backgroundColor: ["#EF4444", "#22C55E", "#3B82F6"], // Tailwind colors
+        hoverBackgroundColor: ["#DC2626", "#16A34A", "#2563EB"],
+        borderWidth: 2,
+      },
+    ],
+  };
 
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true,
-                position: "right",
-                labels: {
-                    usePointStyle: true, // Use circles for legend
-                    padding: 20, // Add padding to labels
-                    
-                },
-            },
-            title: {
-                display: true,
-                text: "Segmentation",
-                align: "start",
-                font: {
-                    size: 16,
-                },
-            },
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "right",
+        labels: {
+          usePointStyle: true,
+          padding: 15,
+          color: "black", 
         },
-    };
+      },
+      tooltip: {
+        backgroundColor: "#1F2937", 
+        bodyColor: "#F9FAFB", 
+      },
+    },
+  };
 
-    return (
-        <div className="w-full h-72">
-            <Doughnut data={data} options={options} />
-        </div>
-    );
+  return (
+    <div className="flex flex-col items-center justify-center px-4 mt-[-8px] bg-white h-60">
+      <h2 className=" font-normal text-black mb-[-30px]">Segmentation</h2>
+      <Doughnut data={data} options={options} />
+    </div>
+  );
 };
 
 export default PieChart;

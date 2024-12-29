@@ -40,7 +40,7 @@ const Sidebar = () => {
 
   return (
     <div>
-      <div className="flex flex-row">
+      <div className="fixed flex flex-row">
         <div>
           {/* Mobile View  toggle button */}
           <button
@@ -50,7 +50,7 @@ const Sidebar = () => {
             <FiMenu size={24} />
           </button>
           <div
-            className={`text-black h-screen flex flex-col transition-transform 
+            className={`text-black bg-[var(--pageBackground)] h-screen flex flex-col transition-transform 
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 
           fixed md:relative w-64 z-10`}
           >
@@ -71,7 +71,7 @@ const Sidebar = () => {
                   onClick={() => {
                     router.push(link.path);
                   }}
-                  className={`flex items-center my-1 px-4 mr-6 rounded-r-full py-3 hover:bg-[#F3E5F5] 
+                  className={`flex items-center my-1 px-4 mr-1 rounded-r-full py-3 hover:bg-[#F3E5F5] 
             ${pathname === link.path ? "bg-[#F3E5F5]" : ""}`}
                 >
                   <span className="mx-4 text-lg">{link.icon}</span>

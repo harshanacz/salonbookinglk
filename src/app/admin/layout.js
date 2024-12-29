@@ -20,9 +20,9 @@ const AdminLayout = ({children}) => {
 
     const isFullSidebar = fullSiderbarRoutes.includes(pathname);
     return (
-        <div className="flex">
+        <div className="flex ">
             {isFullSidebar ? <Sidebar/> : <MiniSidebar/>}
-            <main className="flex-grow p-4">{children}</main>
+            <main className="flex-grow p-4 md:ml-[270px]">{children}</main>
         </div>
     )
 }

@@ -11,7 +11,7 @@ const Overview = () => {
 
   return (
     <div>
-      <div className="h-20 rounded-[20px] flex flex-row items-center justify-between bg-white m-2">
+      <div className="h-16 rounded-[20px] flex flex-row items-center justify-between bg-white my-2">
         <div className="m-5 flex items-center">
           <span className="text-2xl font-bold m-5">Overview</span>
 
@@ -32,7 +32,7 @@ const Overview = () => {
                     className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
                     onClick={() => {
                       setSelected("This Week");
-                      setIsDropdownOpen(false); // Close dropdown after selection
+                      setIsDropdownOpen(false);
                     }}
                   >
                     This Week

@@ -35,5 +35,6 @@ body {
   color: var(--textColor);
   background: var(--pageBackground);
   font-family: 'Montserrat',Arial, Helvetica, sans-serif;
-  margin: 0;
+  overflow: hidden;
+
 }

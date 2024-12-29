@@ -4,7 +4,7 @@ import "./dashboard.css";
 import BarChart from "../ui/dashboard/BarChart";
 import PieChart from "../ui/dashboard/PieChart";
 import LineChart from "../ui/dashboard/LineChart";
-import LNotifications from "../ui/dashboard/LNotifications";
+import Notifications from "../ui/dashboard/Notifications";
 
 const Page = () => {
   const counts = [
@@ -17,9 +17,7 @@ const Page = () => {
   return (
     <div>
       <Overview />
-      <div
-        className="grid grid-cols-2 md:grid-cols-11 gap-4 mt-4"
-      >
+      <div className="grid grid-cols-2 md:grid-cols-11 gap-4 mt-4">
         {counts.map((count, index) => (
           <div
             key={index}
@@ -32,11 +30,17 @@ const Page = () => {
           </div>
         ))}
 
-
         <div className="hidden md:block col-span-1 md:row-span-3 md:col-span-3 bg-white gridStyle">
-          <LNotifications />
+          <div>
+            <div className="flex flex-col items-center justify-center font-medium text-lg mt-3">
+              Latest Notifications
+            </div>
+            <div className="p-3">
+              <Notifications />
+            </div>
+          </div>
         </div>
- 
+
         <div className="col-span-2  md:col-span-4 bg-white gridStyle p-2">
           <BarChart />
         </div>

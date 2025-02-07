@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SignUpPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-purple-50">
+    <div className="min-h-screen flex flex-col items-center justify-center"style={{ backgroundColor: "#F3E5F5" }}>
       <div className="w-full max-w-4xl bg-white shadow-md rounded-lg overflow-hidden flex">
         {/* Left Section - Image */}
         <div className="hidden md:block md:w-1/2">
@@ -90,7 +90,7 @@ const SignUpPage = () => {
               className="flex items-center justify-center w-full py-3 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
             >
               <Image
-                src="/images/signupPage/googleIcon.png" // Replace with your Google icon path
+                src="/images/signupPage/googleIcon.png" 
                 alt="Google icon"
                 width={25}
                 height={25}

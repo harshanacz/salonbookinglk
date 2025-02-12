@@ -41,7 +41,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="col-span-2  md:col-span-4 bg-white gridStyle p-2">
+        <div className="col-span-2  md:col-span-4 bg-white w-full">
           <BarChart />
         </div>
 

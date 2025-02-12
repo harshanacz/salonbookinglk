@@ -4,7 +4,7 @@ import logo from "../../../components/logoDark.png"
 const page = () => {
   return (
     <div>
-        <div className="container flex flex-col items-center justify-center h-screen">
+        <div className="container flex flex-col items-center justify-center h-screen w-full">
             <Image src={logo} alt="logo" width={350} height={130} priority/>
             <div className='w-[500px] bg-white h-[250px] rounded-[20px] shadow-xl p-5'>
             <form className='mx-10'>

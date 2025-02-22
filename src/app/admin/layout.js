@@ -28,7 +28,7 @@ const AdminLayout = ({children}) => {
     return (
         <div className="flex">
             {isFullSidebar ? <Sidebar /> : <MiniSidebar />}
-            <main className="flex-grow p-4 md:ml-[270px]">{children}</main>
+            <main className={`flex-grow p-4 ${isFullSidebar ? "md:ml-[270px]" : "md:ml-[10px]"}`}>{children}</main>
         </div>
     );
 }

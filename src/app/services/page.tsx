@@ -4,6 +4,9 @@ import Image from "next/image";
 import serviceImg from 'public/images/Dmesh.jpg';
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+
 
 interface Service{
     id:number;
@@ -33,6 +36,7 @@ const availableSalons: Salon[] = [
 const AddMore = () => {
   const [selectedServices, setSelectedServices] = useState<Service[]>([]);
   const [selectedSalon, setSelectedSalon] = useState<Salon>(availableSalons[0]);
+  const router = useRouter();
 
   const addService = (service: Service) => {
     if (!selectedServices.find((s) => s.id === service.id)) {
@@ -103,11 +107,12 @@ const AddMore = () => {
             <span>LKR {totalPrice.toLocaleString()}</span>
           </div>
 
-          <Link href="/confirm">
-            <button className=" mt-20 w-full bg-gradient-to-r from-[#8E44AD] to-[#6B0EAD] text-white py-3 rounded-2xl text-lg ">
-              Continue
-            </button>
-          </Link>
+          <button
+            onClick={() => router.push("/services/time")}
+            className="mt-20 w-full bg-gradient-to-r from-[#8E44AD] to-[#6B0EAD] text-white py-3 rounded-2xl text-lg"
+          >
+            Continue
+          </button>
         </div>
       </div>
     </div>

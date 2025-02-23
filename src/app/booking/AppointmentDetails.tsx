@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 
 type Service = {
@@ -28,8 +29,15 @@ export default function AppointmentDetails({
   selectedTime,
   totalPrice,
 }: AppointmentDetailsProps) {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const extraServices = [
+    { id: "3", name: "Nail Art", duration: "1hr", price: 2000 },
+    { id: "4", name: "Foot Massage", duration: "2hr", price: 8000 },
+  ];
+
   return (
-    <div className="absolute top-20 right-20 w-auto h-6 bg-white p-6 shadow-md rounded-lg min-h-[600px]">
+    <div className="absolute top-20 right-20 w-auto bg-white p-6 shadow-md rounded-lg min-h-[600px]">
       {/* Salon Details */}
       <div className="flex items-center gap-3 w-[500px] pr-6">
         <img
@@ -41,9 +49,7 @@ export default function AppointmentDetails({
           <h3 className="text-lg font-semibold">
             {selectedSalon?.name || "Loading..."}
           </h3>
-          <p className="text-sm text-gray-500">
-            {selectedSalon?.rating || "⭐"}
-          </p>
+          <p className="text-sm text-gray-500">{selectedSalon?.rating || "⭐"}</p>
         </div>
       </div>
 
@@ -64,24 +70,44 @@ export default function AppointmentDetails({
         ))}
       </div>
 
-      <div className="mt-4 opacity-50">
-        <p className="text-sm text-gray-600">Time: {selectedTime}</p>
-        <p className="text-sm text-gray-600">Date: {selectedDate}</p>
-      </div>
-
-
       {/* Total Price */}
-      <div className="border-t mt-4 pt-4 flex justify-between text-lg font-bold min-h-[200px]">
+      <div className="border-t mt-4 pt-4 flex justify-between text-lg font-bold">
         <span>Total</span>
         <span>LKR {totalPrice.toLocaleString()}</span>
       </div>
 
       {/* Continue Button */}
-      <Link href="/confirm">
-        <button className="mt-18 w-full bg-gradient-to-r from-[#8E44AD] to-[#6B0EAD] text-white py-3 rounded-2xl text-lg">
-          Continue
-        </button>
-      </Link>
+      <button
+        className="mt-4 w-full bg-gradient-to-r from-[#8E44AD] to-[#6B0EAD] text-white py-3 rounded-2xl text-lg"
+        onClick={() => setShowPopup(true)}
+      >
+        Continue
+      </button>
+
+      {/* Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+            <div className="flex justify-between items-center border-b pb-2 mb-4">
+              <h3 className="text-lg font-semibold">Add An Extra Service?</h3>
+              <button onClick={() => setShowPopup(false)}>×</button>
+            </div>
+            {extraServices.map((service) => (
+              <div key={service.id} className="p-3 bg-purple-100 rounded-lg mb-2">
+                <p className="font-semibold">{service.name}</p>
+                <p className="text-sm text-gray-600">{service.duration}</p>
+                <p className="text-sm">From LKR {service.price.toLocaleString()}</p>
+              </div>
+            ))}
+            <button
+              className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg"
+              onClick={() => setShowPopup(false)}
+            >
+              No Thanks
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

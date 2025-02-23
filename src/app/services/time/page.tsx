@@ -11,10 +11,11 @@ export default function SelectTime() {
   const router = useRouter();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleConfirm = () => {
     if (selectedTime) {
-      router.push("/services/confirm");
+      setIsOpen(true);
     }
   };
   const selectedSalon = {
@@ -61,6 +62,7 @@ export default function SelectTime() {
         selectedTime={selectedTime}
         totalPrice={totalPrice}
       />
+      
       
     </div>
     

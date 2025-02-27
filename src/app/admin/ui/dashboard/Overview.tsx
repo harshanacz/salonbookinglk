@@ -3,11 +3,12 @@ import { LuBadgeCheck } from "react-icons/lu";
 import { MdNotificationsNone } from "react-icons/md";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import Link from "next/link";
 
 const Overview = () => {
-    const [selected, setSelected] = useState("This week");
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
+  const [selected, setSelected] = useState("This week");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
 
   return (
     <div>
@@ -55,13 +56,18 @@ const Overview = () => {
         {/* Right Section */}
         <div className="flex flex-row mr-12 text-3xl gap-10 relative">
           <div className="relative">
-            <LuBadgeCheck />
+            <Link href="/admin/dashboard/verify">
+                <LuBadgeCheck />
+            </Link>
+
             <span className="absolute top-[-8px] right-[-5px] bg-[var(--primary)] text-white rounded-full text-base font-medium w-5 h-5 flex items-center justify-center">
               3
             </span>
           </div>
           <div className="relative">
-            <MdNotificationsNone />
+            <Link href="/admin/dashboard/notifications">
+                <MdNotificationsNone />
+            </Link>
             <span className="absolute top-[-8px] right-[-5px] bg-[var(--primary)] text-white rounded-full text-base font-medium w-5 h-5 flex items-center justify-center">
               5
             </span>
@@ -69,7 +75,7 @@ const Overview = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Overview
+export default Overview;

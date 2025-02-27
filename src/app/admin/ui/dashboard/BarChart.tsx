@@ -15,9 +15,9 @@ const Barchart = () => {
   ];  
 
   return (  
-    <div className='flex flex-col items-center justify-center '>  
+    <div className='flex flex-col items-center justify-center px-4 py-3 h-60'>  
       <h2>Overall appointments</h2>  
-      <BarChart width={400} height={200} data={data} barSize={15} >  
+      <BarChart width={400} height={200} data={data} barSize={15}>  
         <XAxis dataKey="day" />  
         <YAxis />  
         <Tooltip />  

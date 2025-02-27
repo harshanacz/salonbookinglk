@@ -46,14 +46,14 @@ const MiniSidebar = () => {
     ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 
     fixed md:relative w-20 md:justify-center`}
           >
-            <div className="flex flex-col items-center bg-[#F3E5F5] py-4 rounded-r-[20px]">
+            <div className="flex flex-col items-center bg-[#F3E5F5] py-2 rounded-r-[20px]">
               {links.map((link) => (
                 <button
                   key={link.path}
                   onClick={() => {
                     router.push(link.path);
                   }}
-                  className={`flex items-center my-1 px-8 py-6 hover:bg-[#ebd5ee] 
+                  className={`flex items-center my-1 px-8 py-5 hover:bg-[#ebd5ee] 
             ${pathname === link.path ? "bg-[#ebd5ee]" : ""}`}
                 >
                   <span className="text-lg">{link.icon}</span>

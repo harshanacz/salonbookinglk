@@ -108,7 +108,7 @@ const AddMore = () => {
                     </div>
                 </div>
                 <button
-                    onClick={() => router.push("/services/time")}
+                    onClick={() => router.push("")}
                     className="mt-20 w-full bg-gradient-to-r from-[#8E44AD] to-[#6B0EAD] text-white py-3 rounded-2xl text-lg"
                 >
                     Confirm

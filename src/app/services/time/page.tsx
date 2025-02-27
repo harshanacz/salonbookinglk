@@ -53,7 +53,7 @@ export default function SelectTime() {
         <TimeSlot setSelectedTime={setSelectedTime} selectedTime={selectedTime} />
       </div>
 
-      {/* Booking Summary */}
+      {/* Booking Summary vgg*/}
       <BookingSummary selectedTime={selectedTime} />
 
       {/* Appointment Details */}

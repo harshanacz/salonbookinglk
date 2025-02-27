@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SignUpPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center"style={{ backgroundColor: "#F3E5F5" }}>
+    <div className="min-h-screen flex flex-col items-center justify-center"style={{ backgroundColor: "#FFF5FF" }}>
       <div className="w-full max-w-4xl bg-white shadow-md rounded-lg overflow-hidden flex">
         {/* Left Section - Image */}
         <div className="hidden md:block md:w-1/2">

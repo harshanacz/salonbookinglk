@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -100,12 +101,16 @@ export default function ClientTable() {
 
         <div className="mt-4 flex flex-wrap justify-between items-center gap-4">
           <div className="flex gap-4">
-            <Button className="bg-gradient-to-r from-[--secondary] to-[--primary] text-white rounded-2xl font-normal h-8">
-              CREATE
-            </Button>
+            <Link href="/admin/dashboard/notifications/create">
+              <Button className="bg-gradient-to-r from-[--secondary] to-[--primary] text-white rounded-2xl font-normal h-8">
+                CREATE
+              </Button>
+            </Link>
+            <Link href="/admin/dashboard/notifications/send">
             <Button className="bg-gradient-to-r from-[--secondary] to-[--primary] text-white rounded-2xl font-normal h-8">
               SEND NOTIFICATIONS
             </Button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-4">

@@ -15,7 +15,7 @@ const Page = () => {
   ];
 
   return (
-    <div>
+    <div className="p-4 h-full">
       <Overview />
       <div className="grid grid-cols-2 md:grid-cols-11 gap-4 mt-4">
         {counts.map((count, index) => (
@@ -41,7 +41,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="col-span-2  md:col-span-4 bg-white w-full">
+        <div className="col-span-2  md:col-span-4 bg-white">
           <BarChart />
         </div>
 

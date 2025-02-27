@@ -1,6 +1,6 @@
 const page = () => {
   return (
-    <div className="flex-grow flex ">
+    <div>
       Verify
     </div>
   )

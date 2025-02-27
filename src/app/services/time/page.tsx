@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import DateSelector from "@/app/booking/DateSelector";
-import TimeSlot from "@/app/booking/TimeSlot";
-import BookingSummary from "@/app/booking/BookingSummary";
-import AppointmentDetails from "@/app/booking/AppointmentDetails";
+import DateSelector from "@/components/bookingPage/DateSelector";
+import TimeSlot from "@/components/bookingPage/TimeSlot";
+import BookingSummary from "@/components/bookingPage/BookingSummary";
+import AppointmentDetails from "@/components/bookingPage/AppointmentDetails";
 import Link from "next/link";
 
 export default function SelectTime() {
@@ -37,8 +37,10 @@ export default function SelectTime() {
     <div className="p-7 shadow-lg w-full h-screen bg-purple-50">
       
       <nav className="text-gray-600   mb-4 mt-5">
-                <span className="text-black font-semibold pr-3">Services</span>{" > "}
-                <Link href="/services" className="text-gray-500 hover:underline pl-3 pr-3">Time</Link> {" > "}
+                <Link href="/services" className="text-gray-500 hover:underline pl-3 pr-3">Services</Link> {" > "}
+                
+                <span className="text-black font-semibold pr-3">Time</span>{" > "}
+                
                 <Link href="/time" className="text-gray-500 hover:underline pl-3">Confirm</Link>
             </nav>
             <h2 className="pl-6 text-2xl font-bold mb-4">Select Time</h2>     

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-
+import { useRouter } from "next/navigation";
 type Service = {
   id: string;
   name: string;
@@ -30,11 +30,28 @@ export default function AppointmentDetails({
   totalPrice,
 }: AppointmentDetailsProps) {
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedExtras, setSelectedExtras] = useState<Service[]>([]);
+  const router = useRouter();
 
   const extraServices = [
     { id: "3", name: "Nail Art", duration: "1hr", price: 2000 },
     { id: "4", name: "Foot Massage", duration: "2hr", price: 8000 },
+    { id: "5", name: "Facial", price: 5000 },
+    { id: "6", name: "Head Massage", price: 3000 },
+    { id: "7", name: "Hair Spa", price: 4500 },
+    { id: "8", name: "Pedicure", price: 3500 },
   ];
+
+  const handleExtraSelection = (service: Service) => {
+    setSelectedExtras((prevExtras) =>
+      prevExtras.some((item) => item.id === service.id)
+        ? prevExtras.filter((item) => item.id !== service.id)
+        : [...prevExtras, service]
+    );
+    
+  };
+
+  const finalTotal = totalPrice + selectedExtras.reduce((sum, service) => sum + service.price, 0);
 
   return (
     <div className="absolute top-20 right-20 w-auto bg-white p-6 shadow-md rounded-lg min-h-[600px]">
@@ -92,6 +109,8 @@ export default function AppointmentDetails({
               <h3 className="text-lg font-semibold">Add An Extra Service?</h3>
               <button onClick={() => setShowPopup(false)}>×</button>
             </div>
+
+            <div className="max-h-60 overflow-y-auto space-y-2">
             {extraServices.map((service) => (
               <div key={service.id} className="p-3 bg-purple-100 rounded-lg mb-2">
                 <p className="font-semibold">{service.name}</p>
@@ -99,9 +118,11 @@ export default function AppointmentDetails({
                 <p className="text-sm">From LKR {service.price.toLocaleString()}</p>
               </div>
             ))}
+            </div>
+            
             <button
-              className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg"
-              onClick={() => setShowPopup(false)}
+              className="mt-4 w-full bg-gradient-to-r from-[#8E44AD] to-[#6B0EAD] text-white py-3 rounded-2xl text-lg"
+              onClick={() => router.push("/services/confirm")}
             >
               No Thanks
             </button>

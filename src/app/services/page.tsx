@@ -1,18 +1,17 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import serviceImg from 'public/images/Dmesh.jpg';
+import serviceImg from "public/images/Dmesh.jpg";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 
-
-interface Service{
-    id:number;
-    name: string;
-    price:number;
-    duration: string;
+interface Service {
+  id: number;
+  name: string;
+  price: number;
+  duration: string;
 }
 interface Salon {
   id: number;
@@ -20,13 +19,11 @@ interface Salon {
   rating: number;
   image: string;
 }
-const availableServices: Service[] =[
-    {id:1, name:"Hair Massage", price:2000, duration:"1hr"},
-    {id:2, name:"Hair Color", price:5000, duration:"1hr"},
-    {id:3, name:"Hair Treatment", price:2000, duration:"2hr"},
-    {id:4, name:"Hair extension", price:1000, duration:"1hr"},
-    
-  
+const availableServices: Service[] = [
+  { id: 1, name: "Hair Massage", price: 2000, duration: "1hr" },
+  { id: 2, name: "Hair Color", price: 5000, duration: "1hr" },
+  { id: 3, name: "Hair Treatment", price: 2000, duration: "2hr" },
+  { id: 4, name: "Hair extension", price: 1000, duration: "1hr" },
 ];
 const availableSalons: Salon[] = [
   { id: 1, name: "Salon Dmesh", rating: 4.9, image: "/Dmesh.jpg" },
@@ -43,32 +40,55 @@ const AddMore = () => {
       setSelectedServices([...selectedServices, service]);
     }
   };
-  const totalPrice = selectedServices.reduce((sum, service) => sum + service.price, 0);
+  const totalPrice = selectedServices.reduce(
+    (sum, service) => sum + service.price,
+    0
+  );
+  
 
   return (
-    <div className="p-7 shadow-lg w-full h-screen bg-purple-50">
-      <nav className="text-gray-600   mb-4 mt-5">
-                <span className="text-black font-semibold pr-3">Services</span>{" > "}
-                <Link href="/services" className="text-gray-500 hover:underline pl-3 pr-3">Time</Link> {" > "}
-                <Link href="/time" className="text-gray-500 hover:underline pl-3">Confirm</Link>
-            </nav>
+    <div className="p-7 shadow-lg w-full min-h-screen bg-purple-50 flex flex-col overflow-y-scroll no-scrollbar">
+      {/* Navigation */}
+
+      <nav className="text-gray-600 mb-4 mt-5">
+        <span className="text-black font-semibold pr-3">Services</span> {"> "}
+        <Link
+          href="/services"
+          className="text-gray-500 hover:underline pl-3 pr-3"
+        >
+          Time
+        </Link>{" "}
+        {"> "}
+        <Link href="/time" className="text-gray-500 hover:underline pl-3">
+          Confirm
+        </Link>
+      </nav>
 
       {/* Header */}
-      <h1 className="pl-6 text-2xl font-bold mb-4">Add More</h1>
-      <button className="pl-6 bg-purple-900 text-white px-4 py-1 rounded-full text-sm">Related services</button>
 
-      <div className="pl-6 flex flex-col lg:flex-row gap-6 mt-4">
+      <h1 className="pl-6 text-2xl font-bold mb-4">Add More</h1>
+      <button className=" bg-purple-900 text-white px-4 py-1 lg:w-[250px] rounded-full lg:text-sm">
+        Related services
+      </button>
+
+      {/* Main Content */}
+
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-4 ">
         {/* Available Services */}
-        <div className="flex-1 space-y-3">
+        <div className=" space-y-3">
           {availableServices.map((service) => (
-            <div key={service.id} className="flex justify-between items-center bg-white p-3 rounded-lg shadow-md lg:w-[750px]">
+            <div
+              key={service.id}
+              className="flex justify-between items-center bg-white p-3 rounded-lg shadow-md lg:w-[750px]"
+            >
               <div>
                 <p className="text-lg font-normal">{service.name}</p>
                 <p className="text-sm text-gray-500">{service.duration}</p>
               </div>
               <div className="flex items-center gap-4">
-                <p className="text-lg font-normal">LKR {service.price.toLocaleString()}</p>
-                
+                <p className="text-lg font-normal">
+                  LKR {service.price.toLocaleString()}
+                </p>
                 <button
                   onClick={() => addService(service)}
                   className="mt-10 bg-black text-white w-8 h-8 rounded-lg flex items-center justify-center"
@@ -80,13 +100,25 @@ const AddMore = () => {
           ))}
         </div>
 
-        {/* Order Summary */}
-        <div className="absolute top-20 right-20 w-auto h-6 bg-white p-6 shadow-md  rounded-lg min-h-[600px]   ">
+        {/* Order Summary*/}
+
+        <div
+          className="bg-white p-6 shadow-md rounded-lg min-h-[600px] w-full max-w-[600px] 
+             lg:absolute lg:top-20 lg:right-20 lg:w-auto 
+             md:relative  md:mt-0 md:min-h-[300px] "
+        >
           <div className="flex items-center gap-3 w-[500px] pr-6">
-          <img src={selectedSalon.image} alt={selectedSalon.name} className="w-20 h-20 rounded-lg" />
+            <img
+              src={selectedSalon.image}
+              alt={selectedSalon.name}
+              className="w-20 h-20 rounded-lg"
+            />
             <div>
               <h3 className="text-lg font-semibold">{selectedSalon.name}</h3>
-              <p className="text-sm text-gray-500">{selectedSalon.rating} ⭐⭐⭐⭐⭐</p>{/*<img src="/Dmesh.jpg" alt="Salon" className="w-20 h-20 rounded-lg" />
+              <p className="text-sm text-gray-500">
+                {selectedSalon.rating} ⭐⭐⭐⭐⭐
+              </p>
+              {/*<img src="/Dmesh.jpg" alt="Salon" className="w-20 h-20 rounded-lg" />
             <div>
               <h3 className="text-lg font-semibold">Saloon Dmesh</h3>
               <p className="text-sm text-gray-500">4.9 ⭐⭐⭐⭐⭐ (485)</p>*/}

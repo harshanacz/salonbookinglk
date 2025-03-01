@@ -34,7 +34,7 @@ const DateSelector: React.FC<DateSelectorProps> = ({ selectedDate, setSelectedDa
 
   return (
     <div className="flex">
-        <div className="w-1/2 p-4">
+        <div className="w-auto p-4">
         
          
           <div className="bg-gray-100 p-2 rounded-lg  drop-shadow w-3/5 ">
@@ -60,7 +60,7 @@ const DateSelector: React.FC<DateSelectorProps> = ({ selectedDate, setSelectedDa
       </h2>
 
       {/* Calendar Grid */}
-      <div className=" grid grid-cols-7 gap-0  ">
+      <div className=" grid grid-cols-7 gap-2  ">
         {upcomingDays.map((date) => {
           const isAvailable = availableDates.some(availableDate => availableDate.getTime() === date.getTime());
           const isToday = date.toDateString() === today.toDateString(); // Check if it's today

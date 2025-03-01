@@ -54,8 +54,9 @@ export default function AppointmentDetails({
   const finalTotal = totalPrice + selectedExtras.reduce((sum, service) => sum + service.price, 0);
 
   return (
-    <div className="absolute top-20 right-20 w-auto bg-white p-6 shadow-md rounded-lg min-h-[600px]">
+    <div className="bg-white p-6 shadow-md rounded-lg  w-full max-w-[600px] lg:absolute lg:top-20 lg:right-20 lg:w-auto md:relative  md:mt-6 md:min-h-[600px]">
       {/* Salon Details */}
+      <div >
       <div className="flex items-center gap-3 w-[500px] pr-6">
         <img
           src={selectedSalon?.image || "/default-image.jpg"}
@@ -100,6 +101,7 @@ export default function AppointmentDetails({
       >
         Continue
       </button>
+      </div>
 
       {/* Popup */}
       {showPopup && (

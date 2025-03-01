@@ -21,7 +21,8 @@ const timeSlots: TimeSlot[] = Array.from({ length: 15 }, (_, i) => ({
 
 export default function TimeSlotSelector({ selectedTime, setSelectedTime }: TimeSlotProps) {
   return (
-    <div className="w-1/2 h-64 overflow-y-auto border border-gray-300 rounded-lg p-2 space-y-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+    <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-64 overflow-y-auto border border-gray-300 rounded-lg p-2 space-y-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+
       {timeSlots.map((slot, index) => (
         <button
           key={index}

@@ -15,7 +15,7 @@ const Page = () => {
   ];
 
   return (
-    <div className="p-4 h-full">
+    <div className="p-4">
       <Overview />
       <div className="grid grid-cols-2 md:grid-cols-11 gap-4 mt-4">
         {counts.map((count, index) => (

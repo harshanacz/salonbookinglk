@@ -9,7 +9,22 @@
         "createdDate": "2025-02-18T14:30:00Z",
         "profileImage": "https://example.com/profile/johnn.jpg",
         "favourites": [],
-        "bookings": [],
+        "bookings": [
+            {
+                "salonName": "Elegance Salon",
+                "service": "Haircut",
+                "payment": "$45",
+                "date": "2025-03-10",
+                "time": "14:30"
+            },
+            {
+                "salonName": "Beauty Hub",
+                "service": "Facial",
+                "payment": "$75",
+                "date": "2025-02-25",
+                "time": "10:00"
+            }
+        ],
         "address": "123 Main St",
         "reviews": [],
         "notifications": [],
@@ -27,7 +42,22 @@
         "createdDate": "2025-02-17T10:15:00Z",
         "profileImage": "https://example.com/profile/jane.jpg",
         "favourites": [],
-        "bookings": [],
+        "bookings": [
+            {
+                "salonName": "Curl Up & Dye",
+                "service": "Hair Coloring",
+                "payment": "$120",
+                "date": "2025-03-05",
+                "time": "13:00"
+            },
+            {
+                "salonName": "Elegance Salon",
+                "service": "Manicure",
+                "payment": "$35",
+                "date": "2025-02-20",
+                "time": "16:30"
+            }
+        ],
         "address": "456 Elm St",
         "reviews": [],
         "notifications": [],
@@ -45,7 +75,15 @@
         "createdDate": "2025-02-16T09:00:00Z",
         "profileImage": "https://example.com/profile/alice.jpg",
         "favourites": [],
-        "bookings": [],
+        "bookings": [
+            {
+                "salonName": "Scissors & Razors",
+                "service": "Full Makeover",
+                "payment": "$150",
+                "date": "2025-03-12",
+                "time": "11:00"
+            }
+        ],
         "address": "789 Oak St",
         "reviews": [],
         "notifications": [],
@@ -63,7 +101,15 @@
         "createdDate": "2025-02-15T16:45:00Z",
         "profileImage": "https://example.com/profile/bob.jpg",
         "favourites": [],
-        "bookings": [],
+        "bookings": [
+            {
+                "salonName": "Men's Grooming Co",
+                "service": "Beard Trim",
+                "payment": "$25",
+                "date": "2025-03-01",
+                "time": "09:30"
+            }
+        ],
         "address": "321 Pine St",
         "reviews": [],
         "notifications": [],

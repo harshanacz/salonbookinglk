@@ -15,9 +15,11 @@ const Page = () => {
   ];
 
   return (
-    <div className="p-4">
-      <Overview />
-      <div className="grid grid-cols-2 md:grid-cols-11 gap-4 mt-4">
+    <div className="p-4 h-screen overflow-y-auto">
+      <div className="sticky top-0 z-10 bg-white rounded-2xl mt-6 md:mt-0">
+        <Overview />
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-11 gap-4 mt-4 pb-8">
         {counts.map((count, index) => (
           <div
             key={index}
@@ -41,11 +43,11 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="col-span-2  md:col-span-4 bg-white">
+        <div className="col-span-2  md:col-span-4 bg-white p-2 rounded-xl">
           <BarChart />
         </div>
 
-        <div className="col-span-2 md:block md:col-span-4 bg-white gridStyle p-2 px-[30%] md:px-[15%]">
+        <div className="col-span-2 md:block md:col-span-4 bg-white gridStyle p-2 px-[10%] md:px-[15%]">
           <PieChart />
         </div>
 

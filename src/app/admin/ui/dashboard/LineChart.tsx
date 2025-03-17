@@ -26,7 +26,7 @@ export default function TransactionsChart() {
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [
           {
-            label: "Actual",
+            label: "This month",
             data: [5000, 15000, 20000, 25000, 10000, 20000, 30000],
             borderColor: "#8b5cf6",
             backgroundColor: "#8b5cf6",
@@ -34,7 +34,7 @@ export default function TransactionsChart() {
             pointRadius: 4,
           },
           {
-            label: "Forecast",
+            label: "Lasth month",
             data: [10000, 20000, 15000, 30000, 20000, 25000, 15000],
             borderColor: "#f59e0b",
             backgroundColor: "#f59e0b",

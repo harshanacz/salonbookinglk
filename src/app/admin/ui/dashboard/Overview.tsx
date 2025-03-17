@@ -14,10 +14,10 @@ const Overview = () => {
     <div>
       <div className="h-16 rounded-[20px] flex flex-row items-center justify-between bg-white my-2">
         <div className="m-5 flex items-center">
-          <span className="text-2xl font-bold m-5">Overview</span>
+          <span className="text-2xl font-bold m-5">Admin Dashboard</span>
 
-          <span className="m-5 relative">
-            {/* Dropdown Button */}
+          {/*//<span className="m-5 relative">
+            {/* Dropdown Button 
             <button
               className=" text-black py-2 px-4 rounded flex flex-row items-center gap-5"
               onClick={toggleDropdown}
@@ -25,7 +25,7 @@ const Overview = () => {
               {selected} <IoIosArrowDown />
             </button>
 
-            {/* Dropdown Menu */}
+           // Dropdown Menu 
             {isDropdownOpen && (
               <div className="absolute top-full mt-2 left-0 w-32 bg-white border rounded shadow-sm z-10">
                 <div className="py-1">
@@ -50,7 +50,7 @@ const Overview = () => {
                 </div>
               </div>
             )}
-          </span>
+          </span>*/}
         </div>
 
         {/* Right Section */}

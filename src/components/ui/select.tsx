@@ -21,7 +21,10 @@ export function SelectTrigger() {
 }
 
 export function SelectValue() {
-  return <SelectPrimitive.Value />;
+  return<>
+  <SelectPrimitive.Value />
+  <SelectPrimitive.Value placeholder="Select an option" />
+  </> 
 }
 
 export function SelectContent({ children }: { children: React.ReactNode }) {

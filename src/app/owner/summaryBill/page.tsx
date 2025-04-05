@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface Service {
   id: number;
@@ -23,7 +23,9 @@ export default function SummaryBill() {
 
   useEffect(() => {
     // Fetch booked services from localStorage
-    const savedServices: Service[] = JSON.parse(localStorage.getItem('bookedServices') || '[]');
+    const savedServices: Service[] = JSON.parse(
+      localStorage.getItem("bookedServices") || "[]"
+    );
 
     if (savedServices.length > 0) {
       setBookedServices(savedServices);
@@ -33,7 +35,10 @@ export default function SummaryBill() {
     }
 
     // Calculate total price
-    const totalPrice = savedServices.reduce((sum, service) => sum + service.price, 0);
+    const totalPrice = savedServices.reduce(
+      (sum, service) => sum + service.price,
+      0
+    );
     setTotal(totalPrice);
   }, []);
 
@@ -50,7 +55,9 @@ export default function SummaryBill() {
               <p className="text-sm text-gray-600">{service.time}</p>
               <p className="text-md">{service.service}</p>
               <p className="text-sm text-gray-500">{service.duration}</p>
-              <p className="text-right font-semibold">{service.price.toLocaleString()}</p>
+              <p className="text-right font-semibold">
+                {service.price.toLocaleString()}
+              </p>
             </div>
           ))
         ) : (

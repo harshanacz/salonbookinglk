@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface Card {
   id: number;
@@ -16,10 +16,10 @@ export default function Payments() {
   const [cards, setCards] = useState<Card[]>([
     {
       id: 1,
-      type: 'Mastercard',
-      lastFour: '1234',
-      holder: 'John Deo',
-      logo: '/mastercard-logo.png',
+      type: "Mastercard",
+      lastFour: "1234",
+      holder: "John Deo",
+      logo: "/mastercard-logo.png",
     },
   ]);
   const router = useRouter();
@@ -32,7 +32,9 @@ export default function Payments() {
           <div key={card.id} className="bg-white shadow-md rounded-lg p-4">
             <div className="flex justify-between items-center">
               <div>
-                <p className="text-gray-600">{card.type} ending in {card.lastFour}</p>
+                <p className="text-gray-600">
+                  {card.type} ending in {card.lastFour}
+                </p>
                 <p className="text-sm text-gray-500">{card.holder}</p>
               </div>
               <Image src={card.logo} alt="Card Logo" width={40} height={40} />
@@ -43,8 +45,10 @@ export default function Payments() {
             </div>
           </div>
         ))}
-        <div className="bg-white shadow-md rounded-lg p-8 w-full h-40 flex flex-col items-center justify-center cursor-pointer hover:shadow-lg"
-          onClick={() => router.push('/payments/addCard')}>
+        <div
+          className="bg-white shadow-md rounded-lg p-8 w-full h-40 flex flex-col items-center justify-center cursor-pointer hover:shadow-lg"
+          onClick={() => router.push("/payments/addCard")}
+        >
           <p className="text-2xl">+</p>
           <p className="text-lg font-medium">Add cards and accounts</p>
         </div>

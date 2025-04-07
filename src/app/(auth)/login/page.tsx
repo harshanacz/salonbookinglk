@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import Image from 'next/image'; 
 
 export default function Login() {
-  // State to track input values
+
   const [emailOrPhone, setEmailOrPhone] = useState('');
   const [password, setPassword] = useState('');
 
-  // Function to check if both fields are filled
+
   const isFormFilled = emailOrPhone.trim() !== '' && password.trim() !== '';
 
   return (

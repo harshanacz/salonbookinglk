@@ -1,30 +1,17 @@
-name: CI - Next.js Build & Lint (Manual Trigger)
+name: 🚀 CI - Next.js Build & Lint (Manual Trigger)
 
 on:
-  workflow_dispatch:  
+  workflow_dispatch:
 
 jobs:
   ci-checks:
-    name:  Validate PR (Lint, Type Check, Build)
     runs-on: ubuntu-latest
-
     steps:
-      - name:  Checkout code
-        uses: actions/checkout@v3
-
-      - name:  Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name:  Install dependencies
-        run: npm install
-
-      - name:  Run ESLint
-        run: npm run lint
-
-      - name:  Run TypeScript type check
-        run: npm run type-check
-
-      - name:  Run Next.js build
-        run: npm run build
+      - run: npm install
+      - run: npm run lint
+      - run: npm run type-check
+      - run: npm run build

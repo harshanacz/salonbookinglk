@@ -1,0 +1,226 @@
+[
+  {
+    "salonId": 1,
+    "salonName": "Glamour Studio",
+    "email": "glamourstudio@example.com",
+    "contactNumber": "123-456-7890",
+    "location": "123 Main St, New York",
+    "verifiedStatus": true,
+    "createdDate": "2025-02-18T14:30:00Z",
+    "services": [
+      {
+        "serviceName": "Haircut",
+        "price": "$50",
+        "rating": 4.5,
+        "numberOfExperts": 5
+      },
+      {
+        "serviceName": "Manicure",
+        "price": "$30",
+        "rating": 4.0,
+        "numberOfExperts": 3
+      }
+    ]
+  },
+  {
+    "salonId": 2,
+    "salonName": "Elegance Lounge",
+    "email": "elegancelounge@example.com",
+    "contactNumber": "234-567-8901",
+    "location": "456 Elm St, Los Angeles",
+    "verifiedStatus": false,
+    "createdDate": "2025-02-17T10:15:00Z",
+    "services": [
+      {
+        "serviceName": "Pedicure",
+        "price": "$40",
+        "rating": 4.2,
+        "numberOfExperts": 4
+      }
+    ]
+  },
+  {
+    "salonId": 3,
+    "salonName": "Chic Cuts",
+    "email": "chiccuts@example.com",
+    "contactNumber": "345-678-9012",
+    "location": "789 Oak St, Chicago",
+    "verifiedStatus": true,
+    "createdDate": "2025-02-16T09:00:00Z",
+    "services": [
+      {
+        "serviceName": "Facial",
+        "price": "$60",
+        "rating": 4.8,
+        "numberOfExperts": 6
+      },
+      {
+        "serviceName": "Massage",
+        "price": "$70",
+        "rating": 4.7,
+        "numberOfExperts": 4
+      }
+    ]
+  },
+  {
+    "salonId": 4,
+    "salonName": "Urban Style",
+    "email": "urbanstyle@example.com",
+    "contactNumber": "456-789-0123",
+    "location": "101 Pine St, Houston",
+    "verifiedStatus": false,
+    "createdDate": "2025-02-15T08:45:00Z",
+    "services": [
+      {
+        "serviceName": "Hair Coloring",
+        "price": "$80",
+        "rating": 4.3,
+        "numberOfExperts": 5
+      },
+      {
+        "serviceName": "Waxing",
+        "price": "$35",
+        "rating": 4.1,
+        "numberOfExperts": 3
+      }
+    ]
+  },
+  {
+    "salonId": 5,
+    "salonName": "Luxe Beauty Bar",
+    "email": "luxebeautybar@example.com",
+    "contactNumber": "567-890-1234",
+    "location": "202 Maple St, Miami",
+    "verifiedStatus": true,
+    "createdDate": "2025-02-14T11:30:00Z",
+    "services": [
+      {
+        "serviceName": "Bridal Makeup",
+        "price": "$150",
+        "rating": 4.9,
+        "numberOfExperts": 7
+      },
+      {
+        "serviceName": "Spa Package",
+        "price": "$120",
+        "rating": 4.6,
+        "numberOfExperts": 5
+      }
+    ]
+  },
+  {
+    "salonId": 6,
+    "salonName": "Posh Parlor",
+    "email": "poshparlor@example.com",
+    "contactNumber": "678-901-2345",
+    "location": "303 Cedar St, San Francisco",
+    "verifiedStatus": true,
+    "createdDate": "2025-02-13T13:20:00Z",
+    "services": [
+      {
+        "serviceName": "Keratin Treatment",
+        "price": "$200",
+        "rating": 4.7,
+        "numberOfExperts": 6
+      },
+      {
+        "serviceName": "Eyelash Extensions",
+        "price": "$90",
+        "rating": 4.5,
+        "numberOfExperts": 4
+      }
+    ]
+  },
+  {
+    "salonId": 7,
+    "salonName": "Blissful Beauty",
+    "email": "blissfulbeauty@example.com",
+    "contactNumber": "789-012-3456",
+    "location": "404 Birch St, Seattle",
+    "verifiedStatus": false,
+    "createdDate": "2025-02-12T15:00:00Z",
+    "services": [
+      {
+        "serviceName": "Acne Treatment",
+        "price": "$85",
+        "rating": 4.4,
+        "numberOfExperts": 5
+      },
+      {
+        "serviceName": "Chemical Peel",
+        "price": "$110",
+        "rating": 4.3,
+        "numberOfExperts": 4
+      }
+    ]
+  },
+  {
+    "salonId": 8,
+    "salonName": "Serenity Spa",
+    "email": "serenityspa@example.com",
+    "contactNumber": "890-123-4567",
+    "location": "505 Walnut St, Boston",
+    "verifiedStatus": true,
+    "createdDate": "2025-02-11T12:00:00Z",
+    "services": [
+      {
+        "serviceName": "Hot Stone Massage",
+        "price": "$95",
+        "rating": 4.8,
+        "numberOfExperts": 6
+      },
+      {
+        "serviceName": "Aromatherapy",
+        "price": "$75",
+        "rating": 4.6,
+        "numberOfExperts": 5
+      }
+    ]
+  },
+  {
+    "salonId": 9,
+    "salonName": "Golden Scissors",
+    "email": "goldenscissors@example.com",
+    "contactNumber": "901-234-5678",
+    "location": "606 Cherry St, Dallas",
+    "verifiedStatus": false,
+    "createdDate": "2025-02-10T10:30:00Z",
+    "services": [
+      {
+        "serviceName": "Beard Trim",
+        "price": "$25",
+        "rating": 4.2,
+        "numberOfExperts": 3
+      },
+      {
+        "serviceName": "Hair Styling",
+        "price": "$45",
+        "rating": 4.4,
+        "numberOfExperts": 4
+      }
+    ]
+  },
+  {
+    "salonId": 10,
+    "salonName": "Royal Touch",
+    "email": "royaltouch@example.com",
+    "contactNumber": "012-345-6789",
+    "location": "707 Willow St, Atlanta",
+    "verifiedStatus": true,
+    "createdDate": "2025-02-09T09:45:00Z",
+    "services": [
+      {
+        "serviceName": "Luxury Facial",
+        "price": "$130",
+        "rating": 4.9,
+        "numberOfExperts": 7
+      },
+      {
+        "serviceName": "Body Scrub",
+        "price": "$90",
+        "rating": 4.7,
+        "numberOfExperts": 5
+      }
+    ]
+  }
+]
